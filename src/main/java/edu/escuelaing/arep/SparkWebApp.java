@@ -7,6 +7,8 @@ public class SparkWebApp {
     public static void main(String[] args) {
         port(getPort());
         get("/hello", (req, res) -> "Hello Heroku");
+        // Using string/html
+        notFound("<html><body><h1>404 Bobo hp</h1></body></html>");
     }
 
     static int getPort() {
