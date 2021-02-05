@@ -8,8 +8,16 @@ import spark.Response;
 import edu.escuelaing.arep.util.MyLinkedList;
 import edu.escuelaing.arep.stat.StatCalculator;
 
+/**
+ * Esta clase utiliza el framework Spark, para hacer una aplicación web.
+ * @author Federico Barrios Meneses
+ */
 public class SparkWebApp {
 
+    /**
+     * Método principal, pide el puerto y sobre él corre la aplicación.
+     * @param args 
+     */
     public static void main(String[] args) {
         port(getPort());
         get("/hello", (req, res) -> 
@@ -29,9 +37,14 @@ public class SparkWebApp {
         get("/respuesta", (req, res) -> resultsPage(req, res));
         // Using string/html
         notFound("<html><body><h1>Error 404: Página no encontrada</h1></body></html>");
-        staticFiles.expireTime(10);
     }
 
+    /**
+     * Realiza las operaciones necesarias y muestra los resultados en pantalla.
+     * @param req Petición
+     * @param res Respuesta
+     * @return 
+     */
     private static String resultsPage(Request req, Response res) {
         MyLinkedList<Double> lista = new MyLinkedList<Double>();
         StatCalculator calculadora = new StatCalculator();
@@ -53,6 +66,12 @@ public class SparkWebApp {
                 + "</html>";
     }
     
+    /**
+     * Retorna el puerto definido por las variables de entorno del equipo en 
+     * que se está ejecutando. Si no está definida esta variable el puerto por
+     * defecto es el 4567.
+     * @return 4567 si no se encuentra definido ningun otro puerto.
+     */
     static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
