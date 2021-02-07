@@ -25,7 +25,7 @@ comandos de su sistema operativo:
    comandos:
     - Clonar este repositorio:
         ```
-        git clone https://github.com/federico29/AREP-LAB01.git
+        git clone https://github.com/federico29/AREP-LAB02.git
         ```
     - Compilar y empaquetar el código:
         ```
