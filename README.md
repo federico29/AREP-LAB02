@@ -69,4 +69,4 @@ Luego dirijase a la carpeta **\target\site\apidocs** y abra el archivo **index.h
 
 ## Licencia
 Este proyecto está bajo la Licencia GNU General Public License - ver 
-[LICENSE.txt](https://github.com/federico29/AREP-LAB01/blob/master/LICENSE.txt) para más detalles.
+[LICENSE.txt](https://github.com/federico29/AREP-LAB02/blob/master/LICENSE.txt) para más detalles.
